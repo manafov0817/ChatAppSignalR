@@ -1,23 +1,23 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+	ViewData["Title"] = "Home page";
 }
-
-
-<div>
-    <input type="button" id="joinGroup" value="Join Private Group"/>
-</div>
-<input name="message" id="message" /> 
-<input type="button" id="sendButton" value="Send Message"/>
-
-<select id="group">
-    <option value="All">Everyone</option>
-    <option value="MySelf">To Myself</option>
-    <option value="PrivateGroup">Private Group</option>
+ 
+<select id="group" hidden>
+	<option value="All">Everyone</option>
+	<option value="MySelf">To Myself</option>
+	<option value="PrivateGroup">Private Group</option>
 
 </select>
 
-<div id="messages"></div>
-
-    
+<div class="col-sm-4 col-sm-offset-4 frame">
+	<ul></ul>
+	<div>
+		<div class="msj-rta macro">
+			<div class="text text-r" style="background:whitesmoke !important">
+				<input class="mytext" placeholder="Type a message" />
+			</div>
+		</div>
+	</div>
+</div>  

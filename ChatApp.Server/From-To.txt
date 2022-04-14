@@ -1,0 +1,8 @@
+﻿
+--Client to specific server user
+
+--User to specific client user
+
+--Client to All
+
+--Server to All

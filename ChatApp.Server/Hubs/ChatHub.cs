@@ -13,14 +13,14 @@ namespace ChatApp.Server.Hubs
             return Clients.All.SendAsync("ReceiveMessage", message);
         }
 
-        public Task SendMessageToCaller(string message)
+        public Task SendMessageToServer(string message)
         {
-            return Clients.Caller.SendAsync("ReceiveMessage", message);
+            return Clients.Caller.SendAsync("ReceiveMessageToServer", message);
         }
 
-        public Task SendMessageToUser(string connectionId, string message)
+        public Task SendMessageToClient(string connectionId, string message)
         {
-            return Clients.Client(connectionId).SendAsync("ReceiveMessage", message);
+            return Clients.Client(connectionId).SendAsync("ReceiveMessageToClient", message);
         }
 
         public Task JoinGroup(string group)

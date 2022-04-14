@@ -35,6 +35,9 @@
             this.btn_send = new System.Windows.Forms.Button();
             this.chat_Panel = new TheArtOfDev.HtmlRenderer.WinForms.HtmlPanel();
             this.SuspendLayout();
+            this.cmb_sendTo.Items.AddRange(new string[] { "All", "All Clients", "All Administrators" });
+            this.cmb_sendTo.SelectedItem = "All";
+
             // 
             // txt_msg
             // 
@@ -43,7 +46,8 @@
             this.txt_msg.Name = "txt_msg";
             this.txt_msg.Size = new System.Drawing.Size(308, 31);
             this.txt_msg.TabIndex = 2;
-            //this.txt_msg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_msg_KeyDown);
+
+            this.txt_msg.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_msg_KeyDown);
             // 
             // cmb_sendTo
             // 
