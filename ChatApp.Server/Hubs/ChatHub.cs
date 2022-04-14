@@ -20,7 +20,7 @@ namespace ChatApp.Server.Hubs
 
         public Task SendMessageToClient(string connectionId, string message)
         {
-            return Clients.Client(connectionId).SendAsync("ReceiveMessageToClient", message);
+            return Clients.Client(connectionId).SendAsync("ReceiveMessage", message);
         }
 
         public Task JoinGroup(string group)
